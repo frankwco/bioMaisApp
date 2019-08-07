@@ -1,0 +1,59 @@
+<!--
+  Generated template for the QuestaoPar page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>questaoPar</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="fundos">
+
+  <h3>{{questao.enunciado}}</h3>
+  <img style="width: 100%" *ngIf="questao.imagem != ''" [src]="questao.imagem"/>
+  <br/>
+  <div style="text-align: center">
+
+<!--
+  <button ion-button [disabled]="desabilitaBotao.bt1" style="" (click)="botaoPrecionado(botao1, 1)" [color]="corBotao1">{{botao1.descricao}}</button>
+
+  <button ion-button [disabled]="desabilitaBotao.bt2" style="" (click)="botaoPrecionado(botao2, 2)" [color]="corBotao2">{{botao2.descricao}}</button>
+  <br/>
+  <button ion-button [disabled]="desabilitaBotao.bt3" style="" (click)="botaoPrecionado(botao3, 3)" [color]="corBotao3">{{botao3.descricao}}</button>
+
+  <button ion-button [disabled]="desabilitaBotao.bt4" style="" (click)="botaoPrecionado(botao4, 4)" [color]="corBotao4" >{{botao4.descricao}}</button>
+
+  <button ion-button [disabled]="desabilitaBotao.bt5" style="" (click)="botaoPrecionado(botao5, 5)" [color]="corBotao5">{{botao5.descricao}}</button>
+  <br/>
+  <button ion-button [disabled]="desabilitaBotao.bt6" style="" (click)="botaoPrecionado(botao6, 6)" [color]="corBotao6">{{botao6.descricao}}</button>
+*ngFor="let par of pares"
+-->
+</div>
+
+  <div style="text-align: center" >
+    <span *ngFor="let par of pares">
+      <button [disabled]="par.desabilitar" class="botaoPares" (click)="botaoPrecionadoNovo(par)" [ngStyle]="{'border-color': par.corBorda}" id="close-image"><img *ngIf="par.imagem != ''" [src]="par.imagem"/><h5>{{par.descricao}}</h5></button>
+    </span>
+
+</div>
+
+
+
+
+</div>
+<br/>
+
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button (click)="verificar()"  style="width: 100%">Continuar</button>
+  </ion-toolbar>
+</ion-footer>

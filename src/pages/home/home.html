@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title style="text-align: right">
+      <span> {{quantidadeTotalPontos}} BioPontos <img style="width: 10%; float:left" src="assets/imagens/coracao.png"/> <img disabled style="width: 10%; float:left;  opacity: 0.1;" src="assets/imagens/coracao.png"/> </span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+<!--
+<button ion-button  style="width: 100%" (click)="chamarQuestao('par')">Par</button>
+<button ion-button  style="width: 100%" (click)="chamarQuestao('multipla')">Multipla Escolha</button>
+<button ion-button  style="width: 100%" (click)="chamarQuestao('vf')">Verdadeiro Falso</button>
+-->
+<!--
+<button id="close2-CSS" disabled (click)="iniciarResolucao('2')" style="background-image: url(../assets/imagens/questoes/img21am3sd.png)"></button>
+
+
+<button (click)="testeChamadaImagem()" id="close-image"><img src="../assets/imagens/questoes/img21am3sd.png"></button>
+
+<button (click)="testeChamadaImagem()" id="close-image"><h5>Trituração do alimento, início da digestão por amilase salivar e deglutição</h5></button>
+-->
+<div>
+
+<img class="bordas" style="float: left; width: 45%; margin-right: 5%; margin-bottom: 10px"  (click)="loginQuestoes('1')" src="assets/imagens/capasistemadigestorio.png"/>
+<img class="bordas" style="float: left; width: 45%;  margin-bottom: 10px" (click)="loginQuestoes('2')" src="assets/imagens/capasistemadigestorio.png"/>
+</div>
+<img class="bordas" style="width: 45%; margin-top: 20px" src="assets/imagens/capasistemaendocrino.png"/>
+<div>
+<img class="bordas" style="float: left; width: 45%; margin-right: 5%; margin-top: 10px" src="assets/imagens/capasistemareprodutor.png"/>
+<img class="bordas" style="float: left; width: 45%; margin-top: 10px" src="assets/imagens/capasistemasensorial.png"/>
+</div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button (click)="sair()"  style="width: 100%">Sair</button>
+  </ion-toolbar>
+</ion-footer>
+<!--<ion-footer>
+  <ion-toolbar>
+    <button ion-button  style="width: 100%">Feedback</button>
+  </ion-toolbar>
+</ion-footer>-->

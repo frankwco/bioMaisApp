@@ -1,0 +1,47 @@
+<!--
+  Generated template for the QuestaoMultiplaEscolha page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title style="text-color: orange">{{totalPontos}} PT</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<h3>{{questao.enunciado}}</h3>
+<img style="width: 100%" *ngIf="questao.imagem != ''" [src]="questao.imagem"/>
+<br/>
+<span *ngFor="let alter of alternativas">
+  <button  *ngIf="alter.texto != undefined" (click)="marcarAlteranativa(alter)" [ngStyle]="{'border-color': alter.corBorda}" class="botaoPares"><h5 style="text-align: justify">{{alter.texto}}</h5></button>
+</span>
+<!--
+<div   [(ngModel)]="alternativaSelecionada" style="font-size: 18px; text-align: justify; text-justify: inter-word">
+REPETIR IGUAL DO TOQUE NOS PARES
+
+  <p><ion-radio value="1"></ion-radio> {{questao.alternativa1}} </p>
+
+</div>
+-->
+<!--
+<p><ion-radio value="1"></ion-radio> {{questao.alternativa1}} </p>
+<p><ion-radio value="2"></ion-radio> {{questao.alternativa2}} </p>
+<p><ion-radio value="3"></ion-radio> {{questao.alternativa3}} </p>
+<p><ion-radio value="4"></ion-radio> {{questao.alternativa4}} </p>
+<p><ion-radio value="5"></ion-radio> {{questao.alternativa5}} </p>
+-->
+<!--
+<button ion-button (click)="alterarItemRegua()"  style="width: 100%">Dúvida??</button>
+-->
+
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <button ion-button (click)="verificar()"  style="width: 100%">Verificar</button>
+  </ion-toolbar>
+</ion-footer>

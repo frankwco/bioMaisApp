@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Amigos
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>Nossas Pontuções</ion-list-header>
+    <ion-item *ngFor="let item of amigos">
+      <ion-avatar item-left>
+      <img src="">
+    </ion-avatar>
+    <h2>{{item.nome}}</h2>
+    <p>{{item.pontuacao}}</p>
+
+    </ion-item>
+  </ion-list>
+</ion-content>
